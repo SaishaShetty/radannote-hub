@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>RadAnnotate — Phase 1</title>
+  <title >RadAnnotate — Phase 1</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -21,7 +21,7 @@
   <article id="work" class="wrapper style2">
     <div class="container">
       <header>
-        <h2>Phase 1: Synthetic Data Generation</h2>
+        <h2 style="color: #3BA8D3;">Phase 1: Synthetic Data Generation</h2>
         <p>Building a high-quality synthetic dataset to address real-world limitations and improve model performance.</p>
       </header>
 
@@ -40,12 +40,11 @@
   
       <h3>📄 RadGraph Annotation Schema</h3>
 
-      <div style="display: flex; justify-content: center;">
+      <div style="display: flex; justify-content: center; margin-bottom: 3em;">
 
         <div style="text-align: left; max-width: 700px;">
 
-          <div style="border: 1px solid #ccc; padding: 1em 1.5em; border-radius: 8px; background: #f4f4f4; font-family: monospace; font-size: 0.9em; margin-top: 1em;">
-            {
+          <div style="border: 1px solid #ccc; padding: 1em 1.5em; border-radius: 8px; background: #f4f4f4; font-family: monospace; font-size: 0.9em; margin-top: 1em; color: #d22222;">            {
             <br>&nbsp;&nbsp;"text": "The radiograph shows right lung opacity .",
             <br>&nbsp;&nbsp;"entities": {
             <br>&nbsp;&nbsp;&nbsp;&nbsp;"1": {
@@ -66,9 +65,9 @@
             <br>}
           </div>
 
-          <div style="border: 1px solid #ddd; padding: 1em 1.5em; border-radius: 8px; background-color: #fefefe; margin-top: 1.5em;">
+          <div style="border: 1px solid #ddd; padding: 1em 1.5em; border-radius: 8px; background-color: #fefefe; margin-top: 1em;color: #000000;">
             <p><strong>📝 Field Descriptions:</strong></p>
-            <ul style="padding-left: 1.2em; margin: 0;">
+            <ul style="padding-left: 1em; margin: 0;">
               <li><code>text</code>: The radiology report, with each token (including punctuation) separated by a space.</li>
               <li><code>entities</code>: A dictionary of labeled spans in the text.</li>
               <li><code>tokens</code>: The actual words that form the entity.</li>
@@ -80,7 +79,6 @@
       
         </div>
       </div>
-      
 
       <h3>🧠 Sentence-Level Generation</h3>
       <p>
@@ -104,7 +102,7 @@
         By conditioning Mixtral with keyword prompts and RAG-retrieved content, we ensured that the generated data matched the structure and diversity of the original RadGraph dataset. The resulting synthetic sentences were immediately usable for model training and evaluation.
       </p>
   
-      <figure style="text-align: center;">
+      <figure style="text-align: center; margin-bottom: 3em;">
         <img src="images/synthetic_data_pipeline.png" alt="Synthetic Data Generation Pipeline" style="max-width: 80%; height: auto;">
         <figcaption><em>Figure: Overview of the Synthetic Data Generation Pipeline.</em></figcaption>
       </figure>
@@ -122,7 +120,7 @@
             
             A few synthetic outliers were identified, mostly arising from unusual keyword combinations. These instances provided valuable feedback, allowing us to refine our prompt design and improve generation diversity without sacrificing accuracy.
             </p>
-            <figure style="text-align: center;">
+            <figure style="text-align: center; margin-bottom: 3em;">
                 <img src="images/pca_v1.jpg" alt="Synthetic Data Generation Pipeline" style="max-width: 80%; height: auto;">
                 <figcaption><em>Figure: Overview of the Synthetic Data Generation Pipeline.</em></figcaption>
               </figure>

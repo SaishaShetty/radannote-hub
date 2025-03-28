@@ -1989,18 +1989,20 @@ input, select, textarea {
 	.wrapper {
 		background-image: url("images/bg.png");
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-		padding: 8em 0 8em 0;
+		padding: 4em 0 4em 0;
 		text-align: center;
 	}
 
 		.wrapper.style1 {
 			background-image: none;
-			background-color: #fff;
+			background-color: #ffffff;
+
 		}
 
 		.wrapper.style2 {
 			background-color: #ffffff;
 			text-shadow: 1px 1px 0px #fff;
+			color: #333333;
 		}
 
 		.wrapper.style3 {
@@ -2012,6 +2014,11 @@ input, select, textarea {
 			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
+		}
+		.wrapper.style5 {
+			background-color: #ffffff;
+			text-shadow: 1px 1px 0px #fff;
+			color: #233180;
 		}
 
 			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
@@ -2078,7 +2085,7 @@ input, select, textarea {
 		}
 
 			#nav a:hover {
-				color: #fff !important;
+				color: #569aba !important; /* Nav text hover color*/
 				background: #383838;
 			}
 
@@ -2105,7 +2112,7 @@ input, select, textarea {
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		padding: 5em 0 5em 0; /* top nav padding */
 		text-align: left;
 	}
 
