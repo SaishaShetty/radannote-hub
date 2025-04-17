@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+  }
+  
+  #reportDisplay {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+  

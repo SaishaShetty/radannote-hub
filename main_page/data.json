@@ -1,0 +1,35 @@
+{
+   "Report": "The cardiac , mediastinal and hilar contours appear stable .",
+    "Labels": [
+      {
+        "entity_type": "ANAT-DP",
+        "entity_value": "cardiac",
+        "start_position": 11,
+        "end_position": 18
+      },
+      {
+        "entity_type": "ANAT-DP",
+        "entity_value": "mediastinal",
+        "start_position": 23,
+        "end_position": 35
+      },
+      {
+        "entity_type": "ANAT-DP",
+        "entity_value": "hilar",
+        "start_position": 39,
+        "end_position": 44
+      },
+      {
+        "entity_type": "ANAT-DP",
+        "entity_value": "contours",
+        "start_position": 45,
+        "end_position": 53
+      },
+      {
+        "entity_type": "OBS-DP",
+        "entity_value": "stable",
+        "start_position": 58,
+        "end_position": 64
+      }
+    ]
+}

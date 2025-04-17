@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentence Splitter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .sentence-box {
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #007acc;
+      background-color: #f1f9ff;
+    }
+  </style>
+</head>
+<body>
+    <h1>RadAnnotate</h1>
+  <h2>Upload Report JSON</h2>
+  <input type="file" accept=".json" id="jsonInput">
+  <div id="output" style="margin-top: 20px;"></div>
+
+  <script>
+    function splitIntoSentences(text) {
+      return text.match(/[^.!?]+[.!?]+/g) || [text];
+    }
+
+    document.getElementById('jsonInput').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const data = JSON.parse(e.target.result);
+        const report = data.Report || "";
+
+        const sentences = splitIntoSentences(report);
+
+        const output = sentences.map((sentence, i) =>
+          `<div class="sentence-box">${sentence.trim()}</div>`
+        ).join("");
+
+        document.getElementById('output').innerHTML = output;
+      };
+
+      reader.readAsText(file);
+    });
+  </script>
+
+</body>
+</html>
